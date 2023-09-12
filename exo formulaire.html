@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulaire n°2</title>
+    <style>
+        /* Style pour rendre le tableau transparent */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: none;
+        }
+
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body bgcolor="yellow">
+    <marquee>
+        <font color="red" face="arial" size="10em">
+            Formulaire n°2
+        </font>
+    </marquee>
+
+<form>
+    <table>
+        <!-- Pseudo -->
+        <tr>
+            <td><label>Pseudo:</label></td>
+            <td><input type="text" name="pseudo" placeholder="Entrez votre pseudo"></td>
+        </tr>
+
+        <!-- Mot de passe -->
+        <tr>
+            <td><label>Mot de passe:</label></td>
+            <td><input type="password" name="password"></td>
+        </tr>
+
+        <!-- Prénom -->
+        <tr>
+            <td><label>Prénom:</label></td>
+            <td><input type="text" name="prenom" placeholder="Entrez votre prénom"></td>
+        </tr>
+
+        <!-- Email -->
+        <tr>
+            <td><label>Email:</label></td>
+            <td><input type="email" name="email" placeholder="Entrez votre email"></td>
+        </tr>
+
+        <!-- Avatar -->
+        <tr>
+            <td><label for="avatar">Choisir un avatar:</label></td>
+            <td><input type="file" id="avatar" name="avatar"></td>
+        </tr>
+
+        <!-- Fruits préférés -->
+        <tr>
+            <td><label>Quels sont vos fruits préférés?</label></td>
+            <td>
+                Orange: <input type="checkbox" name="fruits" value="orange">
+                Fraise: <input type="checkbox" name="fruits" value="fraise">
+                Poire: <input type="checkbox" name="fruits" value="poire">
+            </td>
+        </tr>
+
+        <!-- Civilité -->
+        <tr>
+            <td><label>Civilité:</label></td>
+            <td>
+                Homme: <input type="radio" name="civilite" value="homme">
+                Femme: <input type="radio" name="civilite" value="femme">
+            </td>
+        </tr>
+
+        <!-- Ville -->
+        <tr>
+            <td><label>Ville:</label></td>
+            <td>
+                <select name="ville">
+                    <option>Nice</option>
+                    <option>Paris</option>
+                    <option>Marseille</option>
+                </select>
+            </td>
+        </tr>
+
+        <!-- Code postal -->
+        <tr>
+            <td><label>Code postal:</label></td>
+            <td><input type="text" name="codepostal" placeholder="Entrez votre code postal"></td>
+        </tr>
+
+        <!-- Adresse -->
+        <tr>
+            <td><label>Adresse:</label></td>
+            <td><textarea rows="5" cols="50" name="adresse"></textarea></td>
+        </tr>
+
+        <!-- Date de naissance -->
+        <tr>
+            <td><label>Date de naissance:</label></td>
+            <td><input type="date" name="naissance"></td>
+        </tr>
+
+        <!-- Jauge -->
+        <tr>
+            <td><label>Jauge:</label></td>
+            <td><input type="range" name="jauge" min="0" max="100"></td>
+        </tr>
+
+        <!-- Téléphone -->
+        <tr>
+            <td><label>Téléphone:</label></td>
+            <td><input type="tel" name="telephone" placeholder="Entrez votre téléphone"></td>
+        </tr>
+
+        <!-- Recherche -->
+        <tr>
+            <td><label>Recherche:</label></td>
+            <td><input type="search" name="recherche"></td>
+        </tr>
+
+        <!-- URL -->
+        <tr>
+            <td><label>URL:</label></td>
+            <td><input type="url" name="url" placeholder="Entrez une URL"></td>
+        </tr>
+
+        <!-- Couleur -->
+        <tr>
+            <td><label>Couleur:</label></td>
+            <td><input type="color" name="couleur"></td>
+        </tr>
+
+        <!-- Bouton de validation -->
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Valider"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
