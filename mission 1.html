@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="qcmForm">
+        <h1>Questionnaire QCM</h1>
+        
+        <div class="question">
+            <p>1. Quelle est la capitale de la France ?</p>
+            <label><input type="radio" name="q1" value="a"> A. Berlin</label><br>
+            <label><input type="radio" name="q1" value="b"> B. Madrid</label><br>
+            <label><input type="radio" name="q1" value="c"> C. Paris</label><br>
+        </div>
+
+        <div class="question">
+            <p>2. Quel est le plus grand océan ?</p>
+            <label><input type="radio" name="q2" value="a"> A. Atlantique</label><br>
+            <label><input type="radio" name="q2" value="b"> B. Indien</label><br>
+            <label><input type="radio" name="q2" value="c"> C. Pacifique</label><br>
+        </div>
+
+        <div class="question">
+            <p>3. Quelle planète est connue comme la planète rouge ?</p>
+            <label><input type="radio" name="q3" value="a"> A. Mars</label><br>
+            <label><input type="radio" name="q3" value="b"> B. Jupiter</label><br>
+            <label><input type="radio" name="q3" value="c"> C. Vénus</label><br>
+        </div>
+
+        <div class="question">
+            <p>4. Qui a écrit "Romeo et Juliette" ?</p>
+            <label><input type="radio" name="q4" value="a"> A. Victor Hugo</label><br>
+            <label><input type="radio" name="q4" value="b"> B. William Shakespeare</label><br>
+            <label><input type="radio" name="q4" value="c"> C. Jane Austen</label><br>
+        </div>
+
+        <div class="question">
+            <p>5. Quel est l'élément chimique représenté par H ?</p>
+            <label><input type="radio" name="q5" value="a"> A. Hélium</label><br>
+            <label><input type="radio" name="q5" value="b"> B. Hydrogène</label><br>
+            <label><input type="radio" name="q5" value="c"> C. Azote</label><br>
+        </div>
+
+        <div class="question">
+            <p>6. Quel pays est connu comme le pays du soleil levant ?</p>
+            <label><input type="radio" name="q6" value="a"> A. Chine</label><br>
+            <label><input type="radio" name="q6" value="b"> B. Corée du Sud</label><br>
+            <label><input type="radio" name="q6" value="c"> C. Japon</label><br>
+        </div>
+
+        <div class="question">
+            <p>7. Quel est le plus long fleuve du monde ?</p>
+            <label><input type="radio" name="q7" value="a"> A. Nil</label><br>
+            <label><input type="radio" name="q7" value="b"> B. Amazone</label><br>
+            <label><input type="radio" name="q7" value="c"> C. Mississippi</label><br>
+        </div>
+
+        <div class="question">
+            <p>8. Qui a peint la Joconde ?</p>
+            <label><input type="radio" name="q8" value="a"> A. Vincent van Gogh</label><br>
+            <label><input type="radio" name="q8" value="b"> B. Léonard de Vinci</label><br>
+            <label><input type="radio" name="q8" value="c"> C. Pablo Picasso</label><br>
+        </div>
+
+        <div class="question">
+            <p>9. Quel animal est connu comme le roi de la jungle ?</p>
+            <label><input type="radio" name="q9" value="a"> A. Tigre</label><br>
+            <label><input type="radio" name="q9" value="b"> B. Lion</label><br>
+            <label><input type="radio" name="q9" value="c"> C. Éléphant</label><br>
+        </div>
+
+        <div class="question">
+            <p>10. Quelle est la couleur primaire qui, mélangée au bleu, donne du vert ?</p>
+            <label><input type="radio" name="q10" value="a"> A. Rouge</label><br>
+            <label><input type="radio" name="q10" value="b"> B. Jaune</label><br>
+            <label><input type="radio" name="q10" value="c"> C. Orange</label><br>
+        </div>
+
+        <button type="button" onclick="clearSelections()">Effacer les sélections</button>
+        <button type="button" onclick="viewAnswer()">Visualiser le corrigé complet</button>
+        <button type="button" onclick="testqcm()">Correction</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        function clearSelections() {
+            let inputs = document.querySelectorAll('#qcmForm input[type="radio"]');
+            inputs.forEach(input => {
+                input.checked = false;
+            });
+            document.getElementById("result").innerText = "";
+        }
+
+        function viewAnswer() {
+            // Here, you can open a new window or navigate to a separate HTML page that contains the answers
+            window.open('answers.html', '_blank');
+        }
+
+        function testqcm() {
+            let score = 0;
+            let correctAnswers = {
+                q1: 'c',
+                q2: 'c',
+                q3: 'a',
+                q4: 'b',
+                q5: 'b',
+                q6: 'c',
+                q7: 'b',
+                q8: 'b',
+                q9: 'b',
+                q10: 'b'
+            };
+            
+            for(let i = 1; i <= 10; i++) {
+                let answer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (answer && answer.value === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").innerText = "Votre score est : " + score;
+        }
+    </script>
+</body>
+</html>
