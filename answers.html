@@ -24,6 +24,15 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+            text-decoration: line-through;
+        }
+
         button {
             padding: 10px 15px;
             margin-top: 20px;
@@ -43,16 +52,16 @@
 <body>
     <h1>Corrigé du QCM</h1>
     
-    <div class="answer">1. La capitale de la France est : <strong>Paris</strong></div>
-    <div class="answer">2. Le plus grand océan est : <strong>Pacifique</strong></div>
-    <div class="answer">3. La planète rouge est : <strong>Mars</strong></div>
-    <div class="answer">4. "Romeo et Juliette" a été écrit par : <strong>William Shakespeare</strong></div>
-    <div class="answer">5. L'élément chimique représenté par H est : <strong>Hydrogène</strong></div>
-    <div class="answer">6. Le pays du soleil levant est : <strong>Japon</strong></div>
-    <div class="answer">7. Le plus long fleuve du monde est : <strong>Amazone</strong></div>
-    <div class="answer">8. La Joconde a été peinte par : <strong>Léonard de Vinci</strong></div>
-    <div class="answer">9. Le roi de la jungle est : <strong>Lion</strong></div>
-    <div class="answer">10. La couleur primaire qui, mélangée au bleu, donne du vert est : <strong>Jaune</strong></div>
+    <div class="answer">1. La capitale de la France est : <span class="incorrect">Berlin</span>, <span class="incorrect">Madrid</span>, <span class="correct">Paris</span></div>
+    <div class="answer">2. Le plus grand océan est : <span class="incorrect">Atlantique</span>, <span class="incorrect">Indien</span>, <span class="correct">Pacifique</span></div>
+    <div class="answer">3. La planète rouge est : <span class="correct">Mars</span>, <span class="incorrect">Jupiter</span>, <span class="incorrect">Vénus</span></div>
+    <div class="answer">4. "Romeo et Juliette" a été écrit par : <span class="incorrect">Victor Hugo</span>, <span class="correct">William Shakespeare</span>, <span class="incorrect">Jane Austen</span></div>
+    <div class="answer">5. L'élément chimique représenté par H est : <span class="incorrect">Hélium</span>, <span class="correct">Hydrogène</span>, <span class="incorrect">Azote</span></div>
+    <div class="answer">6. Le pays du soleil levant est : <span class="incorrect">Chine</span>, <span class="incorrect">Corée du Sud</span>, <span class="correct">Japon</span></div>
+    <div class="answer">7. Le plus long fleuve du monde est : <span class="incorrect">Nil</span>, <span class="correct">Amazone</span>, <span class="incorrect">Mississippi</span></div>
+    <div class="answer">8. La Joconde a été peinte par : <span class="incorrect">Vincent van Gogh</span>, <span class="correct">Léonard de Vinci</span>, <span class="incorrect">Pablo Picasso</span></div>
+    <div class="answer">9. Le roi de la jungle est : <span class="incorrect">Tigre</span>, <span class="correct">Lion</span>, <span class="incorrect">Éléphant</span></div>
+    <div class="answer">10. La couleur primaire qui, mélangée au bleu, donne du vert est : <span class="incorrect">Rouge</span>, <span class="correct">Jaune</span>, <span class="incorrect">Orange</span></div>
     
     <button onclick="window.close()">Fermer</button>
 </body>
