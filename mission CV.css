@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#cv-container {
+  width: 780px;
+  margin: auto;
+  border: 5px solid #3388CC;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 black;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+header, section, footer {
+  margin-bottom: 70px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
