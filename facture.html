@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Facture</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+            background-color: #333;
+            border: 1px solid #fff;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 1em;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .total {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1> Facture </h1>
+        <table id="facture">
+            <tr>
+                <th>Article</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Résultat</th>
+            </tr>
+            <tr>
+                <td><input class="article" type="text"></td>
+                <td><input class="prix" type="number"></td>
+                <td><input class="quantite" type="number"></td>
+                <td><input class="resultat" type="text" readonly></td>
+            </tr>
+            <tr>
+                <td><input class="article" type="text"></td>
+                <td><input class="prix" type="number"></td>
+                <td><input class="quantite" type="number"></td>
+                <td><input class="resultat" type="text" readonly></td>
+            </tr>
+            <tr>
+                <td><input class="article" type="text"></td>
+                <td><input class="prix" type="number"></td>
+                <td><input class="quantite" type="number"></td>
+                <td><input class="resultat" type="text" readonly></td>
+            </tr>
+        </table>
+        <br>
+        <button onclick="reinitialiser()">Réinitialiser</button>
+        <button onclick="calculer()">Calculer</button>
+        <br><br>
+        <input class="total" type="text" readonly>
+    </center>
+
+    <script>
+        function reinitialiser() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].value = "";
+            }
+            var resultats = document.getElementsByClassName("resultat");
+            for (var i = 0; i < resultats.length; i++) {
+                resultats[i].value = "";
+            }
+            document.querySelector(".total").value = "";
+        }
+
+        function calculer() {
+            var resultats = document.getElementsByClassName("resultat");
+            var total = 0;
+            for (var i = 0; i < resultats.length; i++) {
+                var prix = document.getElementsByClassName("prix")[i].value;
+                var quantite = document.getElementsByClassName("quantite")[i].value;
+                if (prix !== "" && quantite !== "") {
+                    resultats[i].value = prix * quantite;
+                    total += prix * quantite;
+                }
+            }
+            document.querySelector(".total").value = "Total : " + total;
+        }
+    </script>
+</body>
+
+</html>
