@@ -1,72 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sommaire :</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sommaire</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('code_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white; /* For better readability on dark background */
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center; /* Center menu items */
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px; /* Space out inline-menu items */
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase; /* Uppercase menu items */
+            font-weight: bold;
+        }
+
+        nav ul li a:hover, nav ul li a:focus {
+            background-color: #555; /* Highlight for menu items on hover/focus */
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #666;
+            border-radius: 0 0 5px 5px; /* Rounded corners for dropdown */
+            min-width: 200px;
+        }
+
+        nav ul li:hover ul {
+            display: block; /* Show dropdown on hover */
+        }
+
+        nav ul li ul li {
+            display: block;
+            text-align: left;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 15px;
+            color: #ddd; /* Lighter text color for dropdown items */
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #777;
+        }
+
+        @media screen and (max-width: 680px) {
+            nav ul li {
+                display: block;
+                width: 100%;
+            }
+
+            nav ul li ul {
+                width: 100%; /* Full width dropdowns on mobile */
+            }
+
+            nav ul li:hover ul {
+                position: static;
+            }
+        }
+    </style>
 </head>
-<body bgcolor="yellow">
-	<h1>Sommaire</h1>
-<ol>
-	<li>
-	<a href="site1.html">Page d'accueil</a>
-	</li>
-	<br>
-	<li>
-	<a href="Page2.html">Page2</a>
-	</li>
-	<br>
-	<li>
-	<a href="Page3.html">Page3</a>
-	</li>
-	<br>
-	<li>
-	<a href="identification.html">Identification</a>
-	</li>
-	<br>
-	<li>
-	<a href="formulaire1.html">Formulaire</a>
-	</li>
-	<br>
-	<li>
-	<a href="exo formulaire.html">Formulaire 2</a>
-	</li>
-	<br>
-	<li>
-    <a href="./tp3-2/index.html"> Tp 3-2 </a>
-    </li>
-    <br>
-    <li>
-    <a href="mission 1.html"> mission 1  </a>
-    </li>
-    <br>
-    <li>
-    <a href="mission 2.html"> mission 2 </a>
-    </li>
-	<br>
-	<li>
-	<a href="tp7.html"> tp7 </a>
-	</li>
-	<br>
-	<li>
-	<a href="calculatrice.html"> calculatrice </a>
-	<li>
-	<br>
-	</li>
-	<a href="facture.html"> facture </a>
-	</li>
-	<br>
-	<li>
-	<a href="calcul moyenne.html"> calcul moyenne</a>
-	</li>
-	<br>
-	
-
-
-
-
-	
-</ol>
-
+<body>
+    <nav>
+        <ul>
+            <li><a href="site1.html"></a></li>
+            <li>
+                <a href="#">HTML & CSS</a>
+                <ul>
+					<li><a href="site1.html">Accueil</a></li>
+                    <li><a href="Page2.html">Page2</a></li>
+                    <li><a href="Page3.html">Page3</a></li>
+					<li><a href="formulaire1.html">Formulaires</a></li>
+					<li><a href="exo formulaire.html">exo formulaire</a></li>
+                    <li><a href="./tp3-2/index.html">Tp 3-2</a></li>
+					
+                </ul>
+            </li>
+            <li>
+                <a href="#">JavaScript</a>
+                <!-- Dropdown for JavaScript -->
+            </li>
+            <li>
+                <a href="#">Bases de données</a>
+                <!-- Dropdown for Databases -->
+            </li>
+            <li>
+            </li>
+            <li>
+                <a href="#">PHP</a>
+                <!-- Dropdown for PHP -->
+            </li>
+            <li>
+                <a href="#">Missions</a>
+                <ul>
+                    <li><a href="mission 1.html">Mission 1</a></li>
+                    <li><a href="mission 2.html">Mission 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Certification</a>
+                <ul>
+                    <li><a href="tp7.html">Tp7</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <h1>Bienvenue sur mon Portfolio</h1>
+    <!-- Add the rest of your page content here -->
 </body>
 </html>
