@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sommaire</title>
+    <title>Mon Portfolio</title>
     <style>
-        /* CSS Reset */
+        /* CSS Reset et styles de base */
         * {
             margin: 0;
             padding: 0;
@@ -16,11 +17,12 @@
             font-family: 'Arial', sans-serif;
             background: url('code_background.jpg') no-repeat center center fixed;
             background-size: cover;
-            color: white; /* For better readability on dark background */
+            color: white;
         }
 
+        /* Styles de la barre de navigation */
         nav {
-            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            background: rgba(0, 0, 0, 0.8);
             padding: 10px 0;
             position: fixed;
             width: 100%;
@@ -31,12 +33,12 @@
         nav ul {
             list-style-type: none;
             padding: 0;
-            text-align: center; /* Center menu items */
+            text-align: center;
         }
 
         nav ul li {
             display: inline-block;
-            margin: 0 15px; /* Space out inline-menu items */
+            margin: 0 15px;
         }
 
         nav ul li a {
@@ -44,24 +46,25 @@
             padding: 15px 20px;
             color: white;
             text-decoration: none;
-            text-transform: uppercase; /* Uppercase menu items */
+            text-transform: uppercase;
             font-weight: bold;
         }
 
         nav ul li a:hover, nav ul li a:focus {
-            background-color: #555; /* Highlight for menu items on hover/focus */
+            background-color: #555;
         }
 
+        /* Styles pour les sous-menus */
         nav ul li ul {
             display: none;
             position: absolute;
             background-color: #666;
-            border-radius: 0 0 5px 5px; /* Rounded corners for dropdown */
+            border-radius: 0 0 5px 5px;
             min-width: 200px;
         }
 
         nav ul li:hover ul {
-            display: block; /* Show dropdown on hover */
+            display: block;
         }
 
         nav ul li ul li {
@@ -71,13 +74,14 @@
 
         nav ul li ul li a {
             padding: 10px 15px;
-            color: #ddd; /* Lighter text color for dropdown items */
+            color: #ddd;
         }
 
         nav ul li ul li a:hover {
             background-color: #777;
         }
 
+        /* Responsive design pour mobile */
         @media screen and (max-width: 680px) {
             nav ul li {
                 display: block;
@@ -85,14 +89,30 @@
             }
 
             nav ul li ul {
-                width: 100%; /* Full width dropdowns on mobile */
+                width: 100%;
             }
 
             nav ul li:hover ul {
                 position: static;
             }
         }
+
+        /* Styles pour le titre principal */
+        h1 {
+            text-align: center;
+            margin-top: 100px; /* Ajuster en fonction de la hauteur de la barre de navigation */
+            font-size: 2.5em;
+            color: #fff;
+        }
+
+        /* Ajouter d'autres styles ici au besoin */
     </style>
+</head>
+<body>
+    <nav>
+        <!-- Votre menu ici -->
+    </nav>
+    <h1>Bienvenue sur mon Portfolio</h1>
 </head>
 <body background="gojo.jpg">
     <nav>
@@ -107,11 +127,24 @@
 					<li><a href="formulaire1.html">Formulaires</a></li>
 					<li><a href="exo formulaire.html">exo formulaire</a></li>
                     <li><a href="./tp3-2/index.html">Tp 3-2</a></li>
+                    <li><a href="tp4/tp4_1.html">tp4_1</a></li>
+                    <li><a href="tp4/carte de visite.html">carte de visiste</a></li>
+                    <li><a href="tp4/tp4_2.html">tp4_2</a></li>
+                    <li><a href="tp9/tp9.html">tp9 html</a></li>
+                   
+
+
 					
                 </ul>
             </li>
             <li>
                 <a href="#">JavaScript</a>
+                <ul>
+                    <li><a href="calculatrice.html">calculatrice</a></li>
+                    <li><a href="facture.html">facture</a></li>
+                    <li><a href="tp9/tp9.html">tp9</a></li>
+
+                </ul>
                 <!-- Dropdown for JavaScript -->
             </li>
             <li>
@@ -140,9 +173,5 @@
             </li>
         </ul>
     </nav>
-    <h1>Bienvenue sur mon Portfolio</h1>
-    <!-- Add the rest of your page content here -->
-
-
 </body>
 </html>
